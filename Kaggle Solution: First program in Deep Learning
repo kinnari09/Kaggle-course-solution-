@@ -1,0 +1,18 @@
+from numpy import loadtxt
+from keras.models import Sequential
+from keras.layers import Dense
+import os
+print(os.listdir("../input"))
+
+os.getcwd()
+os.chdir("../input/pima-indian")
+
+# load the dataset
+#dataset = loadtxt('pima-indians-diabetes.csv.csv', delimiter=',')
+# split into input (X) and output (y) variables
+
+dataset = pd.read_csv("../input/pima-indian/pima-indians-diabetes.csv")
+
+#train = pd.read_csv('../input/pima-indians-diabetes.csv')
+X = dataset[:,0:8]
+y = dataset[:,8]
